@@ -1,0 +1,15 @@
+NieR:Automata has a name filter to prevent profanity in file names. The word list is located
+in data001 in the coreban.dat file. It has a .bin for each region which contains a word list
+that can be unpacked into a text file.
+
+Unpack_name_blacklist unpacks a word_xx.bin into a txt file with each banned word on a new line.
+Repack_name_blacklist repacks a txt file with each banned word on a new line into a bin file.
+
+Requires python3
+
+Sample commands:
+    python unpack_name_blacklist.py word_us.bin
+    python repack_name_blacklist.py word_us.txt
+    
+The bin files can be repacked into the coreban.dat file and swapped inside of data001.cpk
+effectively allowing any names you choose.
